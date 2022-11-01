@@ -8,7 +8,45 @@ $clr-gray-700: hsla(0, 0%, 20%, 1);
 $clr-gray-500: hsl(0, 0%, 51%);
 $clr-gray-400: hsla(0, 0%, 74%, 1);
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 375px;
+}
+
 body {
+  padding: 5rem;
   color: $clr-gray-700;
   font-family: "Montserrat", sans-serif;
+}
+
+.add-task {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  height: 56px;
+
+  input {
+    width: 100%;
+    padding: 19px 12px;
+    border: 1px solid;
+    border-radius: 12px;
+    color: $clr-gray-400;
+
+    &:focus {
+      outline-color: $clr-primary;
+    }
+  }
+
+  button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 12px;
+    color: $clr-secondary;
+    background-color: $clr-primary;
+  }
 }
