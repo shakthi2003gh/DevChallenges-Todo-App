@@ -1,0 +1,14 @@
+@forward "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+$clr-primary: hsla(214, 84%, 56%, 1);
+$clr-secondary: hsla(0, 0%, 100%, 1);
+$clr-black: hsla(0, 0%, 0%, 1);
+$clr-gray-700: hsla(0, 0%, 20%, 1);
+$clr-gray-500: hsl(0, 0%, 51%);
+$clr-gray-400: hsla(0, 0%, 74%, 1);
+
+body {
+  color: $clr-gray-700;
+  font-family: "Montserrat", sans-serif;
+}
