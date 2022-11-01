@@ -77,3 +77,31 @@ body {
     background-color: $clr-primary;
   }
 }
+
+.task-list {
+  display: grid;
+  gap: 27px;
+  font-size: 18px;
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: $clr-black;
+
+  .task {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  input {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+
+    &:checked + label {
+      text-decoration: line-through;
+      color: $clr-gray-700;
+    }
+  }
+}
