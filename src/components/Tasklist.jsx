@@ -3,7 +3,7 @@ import { TodoContext } from "./../context/todoContext";
 
 const TaskList = () => {
   const {
-    tasks: { tasks, activeNav, handleComplete, handleDelete },
+    tasks: { tasks, activeNav, handleComplete, handleDelete, handleDeleteAll },
   } = useContext(TodoContext);
 
   return (
@@ -35,6 +35,13 @@ const TaskList = () => {
             </span>
           </li>
         ))}
+
+      {activeNav === "completed" &&
+        tasks.filter((t) => t.completed).length !== 0 && (
+          <button onClick={handleDeleteAll}>
+            <span className="material-symbols-outlined">delete</span>Delete All
+          </button>
+        )}
     </ul>
   );
 };

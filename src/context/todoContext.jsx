@@ -50,10 +50,14 @@ const Todo = ({ children }) => {
     setTasks((prevTasks) => prevTasks.filter((task) => Number(id) !== task.id));
   };
 
+  const handleDeleteAll = () => {
+    setTasks((prevTasks) => prevTasks.filter((task) => !task.completed));
+  };
+
   const value = {
     navigation: { activeNav, handleActiveNav },
     addTask: { task, handleType, handleSubmit },
-    tasks: { tasks, activeNav, handleComplete, handleDelete },
+    tasks: { tasks, activeNav, handleComplete, handleDelete, handleDeleteAll },
   };
 
   return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>;

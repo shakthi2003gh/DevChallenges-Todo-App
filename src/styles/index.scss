@@ -4,6 +4,7 @@
 $clr-primary: hsla(214, 84%, 56%, 1);
 $clr-secondary: hsla(0, 0%, 100%, 1);
 $clr-black: hsla(0, 0%, 0%, 1);
+$clr-delete: hsla(0, 79%, 63%, 1);
 $clr-gray-700: hsla(0, 0%, 20%, 1);
 $clr-gray-500: hsl(0, 0%, 51%);
 $clr-gray-400: hsla(0, 0%, 74%, 1);
@@ -144,9 +145,30 @@ h1 {
 
   .material-symbols-outlined {
     justify-content: flex-end;
-    font-size: 20;
+    font-size: 20px;
     opacity: 0;
     margin-left: auto;
     transition: opacity 0.2s ease-in;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 5.5px;
+    font-size: 12px;
+    font-weight: 600;
+    width: fit-content;
+    padding: 12px 26px;
+    margin-block: 20px;
+    margin-left: auto;
+    border: none;
+    border-radius: 4px;
+    color: $clr-secondary;
+    background-color: $clr-delete;
+
+    span {
+      font-size: 19px !important;
+      opacity: 1 !important;
+    }
   }
 }
