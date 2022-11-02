@@ -1,9 +1,21 @@
+import { useContext } from "react";
+import { TodoContext } from "./../context/todoContext";
+
 const TaskInputSection = () => {
+  const {
+    addTask: { task, handleType, handleSubmit },
+  } = useContext(TodoContext);
+
   return (
     <div className="add-task">
-      <input type="text" />
+      <input
+        type="text"
+        placeholder="add details"
+        value={task}
+        onChange={handleType}
+      />
 
-      <button>Add</button>
+      <button onClick={handleSubmit}>Add</button>
     </div>
   );
 };
